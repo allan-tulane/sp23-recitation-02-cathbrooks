@@ -59,7 +59,7 @@ where $W(1) = 1$.
     
 
   W(n) = 2W(n/2) + log n
-    asymptotic behavior: O((log n)^2)
+    asymptotic behavior: O(n^log 2)
 
     W(10) = 11.60
     W(100) = 111.34
@@ -78,9 +78,9 @@ where $W(1) = 1$.
 
 **TODO: your answer goes here**
 
-  if $c < \log_b a$: O(n^(log_b a))
-  if $c > \log_b a$: O(n^c)
-  if $c = \log_b a$: O(n^c(log_b n))
+  if $c < \log_b a$: O(n^(log_b a)) (cost of leaves)
+  if $c > \log_b a$: O(n^c) (cost of root)
+  if $c = \log_b a$: O(n^c(log_b n)) (number of levels * max cost of a level)
 
 
 - [ ] 6. (3 points) $W(n)$ is meant to represent the running time of some recursive algorithm. Suppose we always had $a$ processors available to us and we wanted to compute the span of the same algorithm. Implement the function `span_calc` to compute the empirical span, where the work of the algorithm is given by $W(n)$. Implement `test_compare_span` to create a new comparison function for comparing span functions. Derive the asymptotic expressions for the span of the recurrences you used in problem 4 above. Confirm that everything matches up as it should.
