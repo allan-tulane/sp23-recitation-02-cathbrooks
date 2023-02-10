@@ -59,7 +59,7 @@ where $W(1) = 1$.
     
 
   W(n) = 2W(n/2) + log n
-    asymptotic behavior: O(n)
+    asymptotic behavior: O((log n)^2)
 
     W(10) = 11.60
     W(100) = 111.34
